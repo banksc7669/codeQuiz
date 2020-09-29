@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Code Quiz</title>
 </head>
 <body>
-    
+    <div class = "container">
+        <div id = "question-container" class = "hide"></div>
+        <div id = "question">Question</div>
+        <div id = "answer-buttons" class = "btn-grid">
+            <button class = "btn" >numbers</button>
+            <button class = "btn" >alerts</button>
+            <button class = "btn" >booleans</button>
+            <button class = "btn" >strings</button>
+        <div class = "controls">
+            <button id = "start-btn" class = "start-btn btn">Start</button>
+            <button id = "next-btn" class = "next-btn btn hide">Next</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>   
 </body>
 </html>
