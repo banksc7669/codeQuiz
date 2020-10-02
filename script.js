@@ -3,7 +3,7 @@ const nextButton = document.getElementById("next-btn")
 const questionContainerElement = document.getElementById("question-container")
 const questionElement = document.getElementById("question")
 const answerButtonsElement = document.getElementById("answer-buttons")
-
+var c = 100
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -43,7 +43,7 @@ function showQuestion(question) {
 }
 
 function resetState() {
-    nextButton.classList.add("hide")
+    // nextButton.classList.add("hide")
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild 
         (answerButtonsElement.firstChild)
@@ -58,7 +58,7 @@ function selectAnswer(e) {
         setStatusClass(button, button.dataset.correct)
     })
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove("hide")
+        // nextButton.classList.remove("hide")
     }   else {
         startButton.innerText = "Restart"
         startButton.classList.remove("hide")
@@ -95,6 +95,9 @@ function clearStatusClass(element) {
     element.classList.remove("correct")
     element.classList.remove("wrong")
 }
+
+var score = 0;
+var highscore = localStorage.getItem("highscore");
 
 const questions = [
     {
